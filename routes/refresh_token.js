@@ -1,5 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
+const refreshTokenHandler = require('./handler/refresh-token')
+
+router.post('/', refreshTokenHandler.create)
 
 module.exports = router;
